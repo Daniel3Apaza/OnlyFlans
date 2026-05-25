@@ -33,7 +33,7 @@ Favorito.belongsTo(Usuario, { foreignKey: 'follower_id', as: 'follower' });
 Favorito.belongsTo(Usuario, { foreignKey: 'creator_id', as: 'creator' });
 
 const syncDB = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync();
   console.log('Base de datos sincronizada');
 };
 

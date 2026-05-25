@@ -4,9 +4,15 @@ const path = require('path');
 
 const getProfile = async (req, res) => {
   try {
-    const profile = await Creador.findOne({ where: { Usuario_id: req.Usuario.id } });
-    const Usuario = await Usuario.findByPk(req.Usuario.id, { attributes: ['id', 'name', 'email'] });
-    return res.json({ Usuario, profile: profile || null });
+    const profile = await Creador.findOne({ 
+      where: { Usuario_id: req.Usuario.id } 
+    });
+
+    const usuarioData = await Usuario.findByPk(req.Usuario.id, { 
+      attributes: ['id', 'name', 'email'] 
+    });
+
+    return res.json({ usuario: usuarioData, profile: profile || null });
   } catch (err) {
     return res.status(500).json({ message: 'Error al obtener perfil' });
   }
