@@ -1,0 +1,179 @@
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.panel {
+  flex: 1;
+  background: #00AFF0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 2rem;
+}
+
+.panelEmoji {
+  font-size: 72px;
+}
+
+.panelTitle {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.panelSubtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  text-align: center;
+  max-width: 280px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.formSide {
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #fff;
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 360px;
+}
+
+.formTitle {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #111;
+}
+
+.formSubtitle {
+  margin: 0 0 28px;
+  color: #999;
+  font-size: 14px;
+}
+
+.errorBox {
+  background: #fff5f5;
+  border: 1px solid #fcc;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  color: #cc0000;
+  font-size: 14px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  font-size: 14px;
+  padding: 0 14px;
+  outline: none;
+  font-family: inherit;
+  color: #111;
+  box-sizing: border-box;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.input:focus {
+  border-color: #00AFF0;
+  background: #fff;
+}
+
+.select {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  font-size: 14px;
+  padding: 0 36px 0 14px;
+  outline: none;
+  font-family: inherit;
+  color: #111;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.select:focus {
+  border-color: #00AFF0;
+  background-color: #fff;
+}
+
+.selectField {
+  margin-bottom: 28px;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  background: #00AFF0;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #0090c5;
+}
+
+.submitBtn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.footerText {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #888;
+}
+
+.footerLink {
+  color: #00AFF0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 680px) {
+  .panel {
+    display: none;
+  }
+}
